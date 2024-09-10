@@ -11,23 +11,18 @@ repositories {
 
 dependencies {
 
-    implementation 'org.seleniumhq.selenium:selenium-java:4.23.1'
-    implementation 'io.cucumber:cucumber-java:7.18.1'
-    implementation 'com.google.guava:guava:29.0-jre'
+    implementation 'com.google.guava:guava:31.0.1-jre'
     testImplementation 'junit:junit:4.13'
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
 
-    testImplementation 'io.rest-assured:rest-assured:5.5.0'
 }
 
 test {
     useJUnitPlatform()
 }
 
-Task greetingTask() {
+task greetingTask() {
     doLast {
-        String nama = project.hasProperty('nama') ? project.property('nama') : 'Gradle User'
+        String nama = project.hasProperty('nama') ? project.property('nama') : 'AMI'
         println "Hello, $nama! Welcome to Gradle World!"
     }
 }
